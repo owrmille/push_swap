@@ -29,4 +29,13 @@ int check_doubles(t_node *stack, int number);
 t_node	*find_last_node(t_node *stack);
 void	append_node(t_node **stack_a, int number);
 
+/* memory_utils.c */
+void	free_stack(t_node *stack);
+
+/* swap.c */
+void	swap(t_node **stack);
+void	sa(t_node **stack_a);
+void	sb(t_node **stack_b);
+void	ss(t_node **stack_a, t_node **stack_b);
+
 # endif

@@ -1,7 +1,5 @@
 #include "push_swap.h"
 
-#include <stdio.h>
-
 void print_stack(t_node *head) 
 {
     t_node *current = head;

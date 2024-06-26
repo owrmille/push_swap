@@ -25,7 +25,6 @@ void	append_node(t_node **stack, int number)
 	{
 		*stack = node;
 		node->prev = NULL;
-		ft_printf("HEAD: %d\n", (*stack)->nbr);
 	}
 	else
 	{

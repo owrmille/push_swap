@@ -9,6 +9,8 @@ SRCS        = push_swap.c \
             check_utils.c \
             ft_atol_for_nums.c \
 			node_utils.c \
+			memory_utils.c \
+			swap.c \
 			temp.c
 
 OBJS        = $(SRCS:.c=.o)
