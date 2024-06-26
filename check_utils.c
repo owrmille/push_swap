@@ -22,7 +22,7 @@ int	check_str(char **argv, t_node **stack_a)
 {
 	char	**strings;
 	int	i;
-	int	number;
+	long	number;
 
 	i = 0;
 	if (*argv[1] == '\0')
@@ -31,14 +31,16 @@ int	check_str(char **argv, t_node **stack_a)
 		return(0);
 	}
 	strings = ft_split(argv[1], ' ');
-	while(strings[i])
+	while(strings[i] != NULL)
 	{
-		if (!(number = ft_atol_for_nums(strings[i])) || !(check_doubles(*stack_a, number)))
+		// ft_printf("Number: %s\n", strings[i]);
+		number = ft_atol_for_nums(strings[i]);
+		if (number > INT_MAX || number < INT_MIN || !(check_doubles(*stack_a, (int)number)))
 		{
 			print_error();
 			return(0);
 		}
-		append_node(stack_a, number);
+		append_node(stack_a, (int)number);
 		i++;
 	}
 	return (i);
@@ -47,18 +49,18 @@ int	check_str(char **argv, t_node **stack_a)
 int check_args(int argc, char **argv, t_node **stack_a)
 {
 	int	i;
-	int	number;
+	long	number;
 
 	i = 1;
 	while(i < argc)
 	{
-		if (!(number = ft_atol_for_nums(argv[i])) || !(check_doubles(*stack_a, number)))
+		number = ft_atol_for_nums(argv[i]);
+		if (number > INT_MAX || number < INT_MIN || !(check_doubles(*stack_a, (int)number)))
 		{
 			print_error();
 			return(0);
 		}
-		append_node(stack_a, number);
-		
+		append_node(stack_a, (int)number);
 		i++;
 	}
 	return (i - 1);

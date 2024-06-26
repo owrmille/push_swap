@@ -38,4 +38,16 @@ void	sa(t_node **stack_a);
 void	sb(t_node **stack_b);
 void	ss(t_node **stack_a, t_node **stack_b);
 
+/* rotate.c */
+void	rotate(t_node **stack);
+void	ra(t_node	**stack_a);
+void	rb(t_node	**stack_b);
+void	rr(t_node	**stack_a, t_node	**stack_b);
+
+/* reverse_rotate.c */
+void	reverse_rotate(t_node **stack);
+void	rra(t_node	**stack_a);
+void	rrb(t_node	**stack_b);
+void	rrr(t_node	**stack_a, t_node	**stack_b);
+
 # endif

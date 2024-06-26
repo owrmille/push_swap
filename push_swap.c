@@ -14,10 +14,27 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
+		// --swap-- :
+		// ft_printf("HEAD: %d\n", stack_a->nbr);
+		// print_stack(stack_a);
+		// sa(&stack_a);
+		// ft_printf("After swap:\n");
+		// ft_printf("HEAD: %d\n", stack_a->nbr);
+		// print_stack(stack_a);
+
+		// --rotate-- :
+		// ft_printf("HEAD: %d\n", stack_a->nbr);
+		// print_stack(stack_a);
+		// ra(&stack_a);
+		// ft_printf("After rotate:\n");
+		// ft_printf("HEAD: %d\n", stack_a->nbr);
+		// print_stack(stack_a);
+
+		// --reverse_rotate-- :
 		ft_printf("HEAD: %d\n", stack_a->nbr);
 		print_stack(stack_a);
-		sa(&stack_a);
-		ft_printf("After swap:\n");
+		rra(&stack_a);
+		ft_printf("After reverse rotate:\n");
 		ft_printf("HEAD: %d\n", stack_a->nbr);
 		print_stack(stack_a);
 

@@ -11,6 +11,9 @@ SRCS        = push_swap.c \
 			node_utils.c \
 			memory_utils.c \
 			swap.c \
+			rotate.c \
+			reverse_rotate.c \
+			push.c \
 			temp.c
 
 OBJS        = $(SRCS:.c=.o)

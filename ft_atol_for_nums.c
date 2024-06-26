@@ -23,11 +23,9 @@ long	ft_atol_for_nums(const char	*str)
 	{
 		number *= 10;
 		number += *str - 48;
-		if ((sign_val == 1 && number > INT_MAX) || (sign_val == -1 && - number < INT_MIN))
-			return (0);
 		str++;
 	}
 	if (*str != '\0' && !(ft_isdigit(*str)))
-		return (0);
+		return (LONG_MAX);
 	return (sign_val * number);
 }
