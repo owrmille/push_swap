@@ -6,8 +6,10 @@ CC          = cc
 CFLAGS      = -g -Wextra -Werror -Wall
 
 SRCS        = push_swap.c \
-            utils.c \
-            ft_atoi_for_nums.c
+            check_utils.c \
+            ft_atol_for_nums.c \
+			node_utils.c \
+			temp.c
 
 OBJS        = $(SRCS:.c=.o)
 

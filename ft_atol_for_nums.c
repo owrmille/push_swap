@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-long	ft_atoi_for_nums(const char	*str)
+long	ft_atol_for_nums(const char	*str)
 {
 	long	sign_val;
 	long	number;
