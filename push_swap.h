@@ -21,6 +21,7 @@ long	ft_atol_for_nums(const char	*str);
 
 /* check_utils.c */
 void	print_error();
+int	find_symbol(char *s, char c);
 int	check_nums(int argc, char **argv, t_node **stack_a);
 int check_args(int argc, char **argv, t_node **stack_a);
 int check_str(char **argv, t_node **stack_a);

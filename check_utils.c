@@ -5,6 +5,24 @@ void	print_error()
 	ft_printf("Error\n");
 }
 
+int	find_symbol(char *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			count += 1;
+		}
+		i++;
+	}
+	return (count);
+}
+
 int check_doubles(t_node *stack, int number)
 {
 	if (stack == NULL)
@@ -30,7 +48,14 @@ int	check_str(char **argv, t_node **stack_a)
 		print_error();
 		return(0);
 	}
-	strings = ft_split(argv[1], ' ');
+	if (!(find_symbol(argv[1], ' ')))
+	{
+		strings = malloc(sizeof(long) * 2);
+		strings[0] = argv[1];
+		strings[1] = NULL;
+	}
+	else
+		strings = ft_split(argv[1], ' ');
 	print_string_array(strings);
 	while(strings[i] != NULL)
 	{
@@ -38,14 +63,14 @@ int	check_str(char **argv, t_node **stack_a)
 		number = ft_atol_for_nums(strings[i]);
 		if (number > INT_MAX || number < INT_MIN || !(check_doubles(*stack_a, (int)number)))
 		{
-			// free(strings);
+			free(strings);
 			print_error();
 			return(0);
 		}
 		append_node(stack_a, (int)number);
 		i++;
 	}
-	// free(strings);
+	free(strings);
 	return (i);
 }
 
