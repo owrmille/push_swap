@@ -14,3 +14,17 @@ void print_stack(t_node *head)
     }
     ft_printf("NULL\n"); // Indicate the end of the stack
 }
+
+void print_string_array(char **array)
+{
+    if (array == NULL)
+    {
+        ft_printf("Array is NULL\n");
+        return;
+    }
+
+    for (int i = 0; array[i] != NULL; i++)
+    {
+        ft_printf("%s\n", array[i]);
+    }
+}

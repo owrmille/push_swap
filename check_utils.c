@@ -31,18 +31,21 @@ int	check_str(char **argv, t_node **stack_a)
 		return(0);
 	}
 	strings = ft_split(argv[1], ' ');
+	print_string_array(strings);
 	while(strings[i] != NULL)
 	{
 		// ft_printf("Number: %s\n", strings[i]);
 		number = ft_atol_for_nums(strings[i]);
 		if (number > INT_MAX || number < INT_MIN || !(check_doubles(*stack_a, (int)number)))
 		{
+			// free(strings);
 			print_error();
 			return(0);
 		}
 		append_node(stack_a, (int)number);
 		i++;
 	}
+	// free(strings);
 	return (i);
 }
 

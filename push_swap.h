@@ -14,6 +14,7 @@ typedef	struct s_node
 
 /* temp.c - for me, delete or comment later */
 void print_stack(t_node *head);
+void print_string_array(char **array);
 
 /* ft_atoi_for_nums.c */
 long	ft_atol_for_nums(const char	*str);
@@ -31,6 +32,7 @@ void	append_node(t_node **stack_a, int number);
 
 /* memory_utils.c */
 void	free_stack(t_node *stack);
+void	free_array(char	**array);
 
 /* swap.c */
 void	swap(t_node **stack);
@@ -49,5 +51,10 @@ void	reverse_rotate(t_node **stack);
 void	rra(t_node	**stack_a);
 void	rrb(t_node	**stack_b);
 void	rrr(t_node	**stack_a, t_node	**stack_b);
+
+/* push.c */
+void	push(t_node **stack_1, t_node **stack_2);
+void	pa(t_node **stack_a, t_node **stack_b);
+void	pb(t_node **stack_a, t_node **stack_b);
 
 # endif
