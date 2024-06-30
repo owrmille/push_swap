@@ -58,4 +58,8 @@ void	push(t_node **stack_1, t_node **stack_2);
 void	pa(t_node **stack_a, t_node **stack_b);
 void	pb(t_node **stack_a, t_node **stack_b);
 
+/* sort_three_nodes.c */
+t_node *find_max_node(t_node *stack);
+void	sort_three_nodes(t_node **stack);
+
 # endif

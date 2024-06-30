@@ -14,6 +14,7 @@ SRCS        = push_swap.c \
 			rotate.c \
 			reverse_rotate.c \
 			push.c \
+			sort_three_nodes.c \
 			temp.c
 
 OBJS        = $(SRCS:.c=.o)

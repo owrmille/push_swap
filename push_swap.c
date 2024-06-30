@@ -39,25 +39,29 @@ int	main(int argc, char **argv)
 		// print_stack(stack_a);
 
 		// --push-- :
-		ft_printf("HEAD: %d\n", stack_a->nbr);
-		print_stack(stack_a);
-		print_stack(stack_b);
+		// ft_printf("HEAD: %d\n", stack_a->nbr);
+		// print_stack(stack_a);
+		// print_stack(stack_b);
 
-		pb(&stack_a, &stack_b);
-		print_stack(stack_a);
-		print_stack(stack_b);
+		// pb(&stack_a, &stack_b);
+		// print_stack(stack_a);
+		// print_stack(stack_b);
 
-		pb(&stack_a, &stack_b);
-		print_stack(stack_a);
-		print_stack(stack_b);
+		// pb(&stack_a, &stack_b);
+		// print_stack(stack_a);
+		// print_stack(stack_b);
 
-		pb(&stack_a, &stack_b);
-		print_stack(stack_a);
-		print_stack(stack_b);
+		// pb(&stack_a, &stack_b);
+		// print_stack(stack_a);
+		// print_stack(stack_b);
 
-		pb(&stack_a, &stack_b);
+		// pb(&stack_a, &stack_b);
+		// print_stack(stack_a);
+		// print_stack(stack_b);
+
 		print_stack(stack_a);
-		print_stack(stack_b);
+		sort_three_nodes(&stack_a);
+		print_stack(stack_a);
 
 		free_stack(stack_a);
 		free_stack(stack_b);
