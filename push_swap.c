@@ -3,9 +3,11 @@
 int	main(int argc, char **argv)
 {
 	int	size;
-	t_node	*stack_a = NULL;
-	t_node	*stack_b = NULL;
+	t_node	*stack_a; // = NULL;
+	t_node	*stack_b; // = NULL;
 
+	stack_a = NULL;
+	stack_b = NULL;
 	// stack_a = (t_node *)malloc(sizeof(t_node));
 	if (!(size = check_nums(argc, argv, &stack_a)))
 	{
@@ -59,8 +61,13 @@ int	main(int argc, char **argv)
 		// print_stack(stack_a);
 		// print_stack(stack_b);
 
+		// --sort 3 nodes--:
+		// print_stack(stack_a);
+		// sort_three_nodes(&stack_a);
+		// print_stack(stack_a);
+
 		print_stack(stack_a);
-		sort_three_nodes(&stack_a);
+		sort(size, &stack_a, &stack_b);
 		print_stack(stack_a);
 
 		free_stack(stack_a);

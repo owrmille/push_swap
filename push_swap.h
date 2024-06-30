@@ -62,4 +62,10 @@ void	pb(t_node **stack_a, t_node **stack_b);
 t_node *find_max_node(t_node *stack);
 void	sort_three_nodes(t_node **stack);
 
+/* sort_utils.c */
+int	is_stack_sorted(t_node *stack);
+
+/* sort.c */
+void	sort(int size, t_node **stack_a, t_node **stack_b);
+
 # endif
