@@ -1,12 +1,11 @@
 #include "push_swap.h"
 
-t_node *find_max_node(t_node *stack)
+t_node	*find_max_node(t_node *stack)
 {
-	t_node *max_node;
+	t_node	*max_node;
 
 	if (stack == NULL)
 		return (NULL);
-	
 	max_node = stack;
 	stack = stack->next;
 	while (stack)

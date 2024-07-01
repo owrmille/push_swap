@@ -4,7 +4,7 @@ void	free_stack(t_node *stack)
 {
 	if (stack)
 	{
-		while(stack->next)
+		while (stack->next)
 		{
 			stack = stack->next;
 			if (stack->prev)

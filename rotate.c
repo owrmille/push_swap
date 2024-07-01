@@ -4,6 +4,7 @@ void	rotate(t_node **stack)
 {
 	t_node	*first_node;
 	t_node	*last_node;
+
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return ;
 	first_node = *stack;

@@ -4,28 +4,28 @@
 # include <limits.h>
 # include "./libft/libft/libft.h"
 
-typedef	struct s_node
+typedef struct s_node
 {
-	int	nbr;
-	int	idx;
+	int				nbr;
+	int				idx;
 	struct s_node	*next;
 	struct s_node	*prev;
-} t_node;
+}	t_node;
 
 /* temp.c - for me, delete or comment later */
-void print_stack(t_node *head);
-void print_string_array(char **array);
+void	print_stack(t_node *head);
+void	print_string_array(char **array);
 
 /* ft_atoi_for_nums.c */
 long	ft_atol_for_nums(const char	*str);
 
 /* check_utils.c */
-void	print_error();
-int	find_symbol(char *s, char c);
-int	check_nums(int argc, char **argv, t_node **stack_a);
-int check_args(int argc, char **argv, t_node **stack_a);
-int check_str(char **argv, t_node **stack_a);
-int check_doubles(t_node *stack, int number);
+void	print_error(void);
+int		find_symbol(char *s, char c);
+int		check_nums(int argc, char **argv, t_node **stack_a);
+int		check_args(int argc, char **argv, t_node **stack_a);
+int		check_str(char **argv, t_node **stack_a);
+int		check_doubles(t_node *stack, int number);
 
 /* node_utils.c */
 t_node	*find_last_node(t_node *stack);
@@ -59,11 +59,11 @@ void	pa(t_node **stack_a, t_node **stack_b);
 void	pb(t_node **stack_a, t_node **stack_b);
 
 /* sort_three_nodes.c */
-t_node *find_max_node(t_node *stack);
+t_node	*find_max_node(t_node *stack);
 void	sort_three_nodes(t_node **stack);
 
 /* sort_utils.c */
-int	is_stack_sorted(t_node *stack);
+int		is_stack_sorted(t_node *stack);
 
 /* sort.c */
 void	sort(int size, t_node **stack_a, t_node **stack_b);
