@@ -7,7 +7,10 @@
 typedef struct s_node
 {
 	int				nbr;
-	int				idx;
+	int				associate;
+	int				cur_idx;
+	int				price_before_push;
+	int				top_half;
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;
@@ -64,6 +67,10 @@ void	sort_three_nodes(t_node **stack);
 
 /* sort_utils.c */
 int		is_stack_sorted(t_node *stack);
+
+/* stack_utils.c */
+void	init_nodes(t_node **stack_a, t_node **stack_b);
+void	set_associate_nodes(t_node **stack_a, t_node **stack_b);
 
 /* sort.c */
 void	sort(int size, t_node **stack_a, t_node **stack_b);

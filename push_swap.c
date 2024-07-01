@@ -66,9 +66,16 @@ int	main(int argc, char **argv)
 		// sort_three_nodes(&stack_a);
 		// print_stack(stack_a);
 
+		ft_printf("size: %d\n", size);
+		ft_printf("A before:\n");
 		print_stack(stack_a);
+		ft_printf("B before:\n");
+		print_stack(stack_b);
 		sort(size, &stack_a, &stack_b);
+		ft_printf("A after:\n");
 		print_stack(stack_a);
+		ft_printf("B after:\n");
+		print_stack(stack_b);
 
 		free_stack(stack_a);
 		free_stack(stack_b);

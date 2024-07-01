@@ -16,6 +16,7 @@ SRCS        = push_swap.c \
 			push.c \
 			sort_three_nodes.c \
 			sort_utils.c \
+			stack_utils.c \
 			sort.c \
 			temp.c
 
