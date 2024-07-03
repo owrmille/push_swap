@@ -71,11 +71,18 @@ int	main(int argc, char **argv)
 		print_stack(stack_a);
 		ft_printf("B before:\n");
 		print_stack(stack_b);
+		ft_printf("\n");
+
 		sort(size, &stack_a, &stack_b);
-		ft_printf("A after:\n");
+		// print_associates(stack_b);
+		print_indices(stack_a);
+		print_indices(stack_b);
+
+		ft_printf("\nA after:\n");
 		print_stack(stack_a);
 		ft_printf("B after:\n");
 		print_stack(stack_b);
+
 
 		free_stack(stack_a);
 		free_stack(stack_b);

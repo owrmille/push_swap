@@ -18,6 +18,8 @@ typedef struct s_node
 /* temp.c - for me, delete or comment later */
 void	print_stack(t_node *head);
 void	print_string_array(char **array);
+void	print_associates(t_node *stack);
+void	print_indices(t_node *stack);
 
 /* ft_atoi_for_nums.c */
 long	ft_atol_for_nums(const char	*str);
@@ -69,8 +71,11 @@ void	sort_three_nodes(t_node **stack);
 int		is_stack_sorted(t_node *stack);
 
 /* stack_utils.c */
-void	init_nodes(t_node **stack_a, t_node **stack_b);
+int		find_smallest_nbr(t_node *stack);
 void	set_associate_nodes(t_node **stack_a, t_node **stack_b);
+void	set_cur_idx(t_node **stack);
+void	set_indices(t_node **stack_a, t_node **stack_b);
+void	init_nodes(t_node **stack_a, t_node **stack_b);
 
 /* sort.c */
 void	sort(int size, t_node **stack_a, t_node **stack_b);

@@ -34,3 +34,33 @@ void	print_string_array(char **array)
 		i++;
 	}
 }
+
+void	print_associates(t_node *stack_b)
+{
+	t_node *cur;
+
+	cur = stack_b;
+	while (cur)
+	{
+		// if (stack_b->associate == NULL)
+		// 	ft_printf("Element: %d, Associate: NULL");
+		// else
+		ft_printf("\nNumber: %d, ", cur->nbr);
+		ft_printf("Associate: %d\n", cur->associate);
+		cur = cur->next;
+	}
+}
+
+void	print_indices(t_node *stack)
+{
+	t_node	*cur;
+
+	cur = stack;
+	while (cur)
+	{
+		ft_printf("\nNumber: %d, ", cur->nbr);
+		ft_printf("Index: %d\n", cur->cur_idx);
+		ft_printf("Top-half: %d\n", cur->top_half);
+		cur = cur->next;
+	}
+}

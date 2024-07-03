@@ -35,14 +35,13 @@ $(NAME): $(OBJS)
         git submodule update --recursive libft; \
     fi
 	@make -C $(LIBFT_DIR)
-
 	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $@
 
 clean:
 	@echo "Cleaning up..."
 	@make clean -C $(LIBFT_DIR)
 	@rm -rf $(OBJS)
-			
+
 fclean: clean
 	@rm -rf $(NAME) $(LIBFT)
 
