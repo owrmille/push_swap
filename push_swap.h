@@ -11,6 +11,7 @@ typedef struct s_node
 	int				cur_idx;
 	int				price_before_push;
 	int				top_half;
+	int				cheapest_price;
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;
@@ -77,6 +78,7 @@ void	find_cur_idx(t_node **stack);
 void	set_indices(t_node **stack_a, t_node **stack_b);
 void	calculate_price(t_node **stack);
 void	set_prices(t_node **stack_a, t_node **stack_b);
+void	set_cheapest_node(t_node **stack_a, t_node **stack_b);
 void	init_nodes(t_node **stack_a, t_node **stack_b);
 
 /* sort.c */

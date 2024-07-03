@@ -6,7 +6,7 @@ void	sort(int size, t_node **stack_a, t_node **stack_b)
 		return ;
 	if (size == 3)
 		sort_three_nodes(stack_a);
-	//if (size == 5) to consider
+	//if (size == 5) to consider !!!
 	else
 	{
 		while (size > 3)
@@ -20,6 +20,7 @@ void	sort(int size, t_node **stack_a, t_node **stack_b)
 		// {
 
 		// }
+		
 
 	}
 }

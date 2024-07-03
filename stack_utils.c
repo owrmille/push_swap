@@ -145,9 +145,41 @@ void	set_prices(t_node **stack_a, t_node **stack_b)
 	calculate_price(stack_b);
 }
 
+void	set_cheapest_node(t_node **stack_a, t_node **stack_b)
+{
+	t_node	*cur_a;
+	t_node	*cur_b;
+	t_node	*cheapest_node;
+	int		cheapest_price;
+
+	cur_a = *stack_a;
+	cur_b = *stack_b;
+	cheapest_price = INT_MAX;
+	while (cur_b)
+	{
+		while (cur_a)
+		{
+			if (cur_a->nbr == cur_b->associate
+				&& cur_a->price_before_push + cur_b->price_before_push
+				< cheapest_price)
+			{
+				cheapest_price = cur_a->price_before_push
+					+ cur_b->price_before_push;
+				cheapest_node = cur_b;
+			}
+			else
+				cur_b->cheapest_price = 0;
+			cur_a = cur_a->next;
+		}
+		cur_b = cur_b->next;
+	}
+	cheapest_node->cheapest_price = 1;
+}
+
 void	init_nodes(t_node **stack_a, t_node **stack_b)
 {
 	set_associate_nodes(stack_a, stack_b);
 	set_indices(stack_a, stack_b);
 	set_prices(stack_a, stack_b);
+	set_cheapest_node(stack_a, stack_b);
 }

@@ -58,10 +58,11 @@ void	print_info(t_node *stack)
 	cur = stack;
 	while (cur)
 	{
-		ft_printf("\nNumber: %d, ", cur->nbr);
+		ft_printf("\nNumber: %d\n", cur->nbr);
 		ft_printf("Index: %d\n", cur->cur_idx);
-		ft_printf("Top-half: %d\n", cur->top_half);
+		ft_printf("Top-half (flag): %d\n", cur->top_half);
 		ft_printf("Price: %d\n", cur->price_before_push);
+		ft_printf("Cheapest price (flag): %d\n", cur->cheapest_price);
 		cur = cur->next;
 	}
 }
