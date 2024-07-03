@@ -51,7 +51,7 @@ void	print_associates(t_node *stack_b)
 	}
 }
 
-void	print_indices(t_node *stack)
+void	print_info(t_node *stack)
 {
 	t_node	*cur;
 
@@ -61,6 +61,7 @@ void	print_indices(t_node *stack)
 		ft_printf("\nNumber: %d, ", cur->nbr);
 		ft_printf("Index: %d\n", cur->cur_idx);
 		ft_printf("Top-half: %d\n", cur->top_half);
+		ft_printf("Price: %d\n", cur->price_before_push);
 		cur = cur->next;
 	}
 }

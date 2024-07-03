@@ -75,8 +75,8 @@ int	main(int argc, char **argv)
 
 		sort(size, &stack_a, &stack_b);
 		// print_associates(stack_b);
-		print_indices(stack_a);
-		print_indices(stack_b);
+		print_info(stack_a);
+		print_info(stack_b);
 
 		ft_printf("\nA after:\n");
 		print_stack(stack_a);

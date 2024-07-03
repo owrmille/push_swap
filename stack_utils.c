@@ -88,7 +88,7 @@ void	set_associate_nodes(t_node **stack_a, t_node **stack_b)
 	}
 }
 
-void	set_cur_idx(t_node **stack)
+void	find_cur_idx(t_node **stack)
 {
 	int		idx;
 	int		size;
@@ -99,24 +99,55 @@ void	set_cur_idx(t_node **stack)
 	idx = 0;
 	while (cur)
 	{
-		cur->cur_idx = idx;
 		if (idx <= size / 2)
 			cur->top_half = 1;
 		else
 			cur->top_half = 0;
-		idx++;
+		cur->cur_idx = idx;
 		cur = cur->next;
+		idx++;
 	}
 }
 
 void	set_indices(t_node **stack_a, t_node **stack_b)
 {
-	set_cur_idx(stack_a);
-	set_cur_idx(stack_b);
+	find_cur_idx(stack_a);
+	find_cur_idx(stack_b);
+}
+
+void	calculate_price(t_node **stack)
+{
+	t_node	*cur;
+	int		size;
+
+	cur = *stack;
+	size = stack_size(cur);
+	while (cur)
+	{
+		if (cur->cur_idx == 0)
+		{
+			cur->price_before_push = 0;
+		}
+		else
+		{
+			if (cur->top_half == 1)
+				cur->price_before_push = cur->cur_idx;
+			else if (cur->top_half == 0)
+				cur->price_before_push = size - cur->cur_idx;
+		}
+		cur = cur->next;
+	}
+}
+
+void	set_prices(t_node **stack_a, t_node **stack_b)
+{
+	calculate_price(stack_a);
+	calculate_price(stack_b);
 }
 
 void	init_nodes(t_node **stack_a, t_node **stack_b)
 {
 	set_associate_nodes(stack_a, stack_b);
 	set_indices(stack_a, stack_b);
+	set_prices(stack_a, stack_b);
 }
