@@ -86,6 +86,8 @@ void	rotate_stacks(t_node **stack_a, t_node **stack_b, t_node *cheapest);
 void	rev_rotate_stacks(t_node **stack_a, t_node **stack_b, t_node *cheapest);
 t_node	*find_cheapest_node(t_node *stack);
 t_node	*find_associate_node(t_node *node_b, t_node *stack_a);
+void	rotate_cheapest_to_top_a(t_node **stack_a, t_node *cheapest_node);
+void	rotate_cheapest_to_top_b(t_node **stack_b, t_node *cheapest_associate);
 void	rearrange_nodes(t_node **stack_a, t_node **stack_b);
 void	sort(int size, t_node **stack_a, t_node **stack_b);
 
