@@ -36,6 +36,21 @@ int check_doubles(t_node *stack, int number)
 	return (1);
 }
 
+void	free_split(char **strings)
+{
+	int	i;
+
+	i = 0;
+	if (!strings)
+		return ;
+	while (strings[i])
+	{
+		free(strings[i]);
+		i++;
+	}
+	free(strings);
+}
+
 int	check_str(char **argv, t_node **stack_a)
 {
 	char	**strings;
@@ -50,27 +65,27 @@ int	check_str(char **argv, t_node **stack_a)
 	}
 	if (!(find_symbol(argv[1], ' ')))
 	{
-		strings = malloc(sizeof(long) * 2);
+		strings = malloc(sizeof(char *) * 2);
 		strings[0] = argv[1];
 		strings[1] = NULL;
 	}
 	else
 		strings = ft_split(argv[1], ' ');
-	print_string_array(strings);
+	// print_string_array(strings);
 	while(strings[i] != NULL)
 	{
 		// ft_printf("Number: %s\n", strings[i]);
 		number = ft_atol_for_nums(strings[i]);
 		if (number > INT_MAX || number < INT_MIN || !(check_doubles(*stack_a, (int)number)))
 		{
-			free(strings);
+			free_split(strings);
 			print_error();
 			return(0);
 		}
 		append_node(stack_a, (int)number);
 		i++;
 	}
-	free(strings);
+	free_split(strings);
 	return (i);
 }
 

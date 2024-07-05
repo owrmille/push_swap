@@ -5,16 +5,28 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "(lldb) Launch",
+			"name": "(gdb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "/Users/iasemintopchu/Desktop/github_projects/push_swap/push_swap",
-			"args": ["5 2 3 6 8 1"],
+			"program": "/home/iatopchu/github_owrmille_repos/push_swap_fifth_Jul/old_code/push_swap/push_swap",
+			"args": ["8 6 3 2 9 7 4 1 5"],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
 			"environment": [],
 			"externalConsole": false,
-			"MIMode": "lldb"
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
 		}
 
 	]

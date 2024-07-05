@@ -35,6 +35,6 @@ void	rrb(t_node	**stack_b)
 void	rrr(t_node	**stack_a, t_node	**stack_b)
 {
 	reverse_rotate(stack_a);
-	rotate(stack_b);
+	reverse_rotate(stack_b);
 	ft_putstr_fd("rrr\n", 1);
 }

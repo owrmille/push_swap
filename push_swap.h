@@ -72,11 +72,12 @@ void	sort_three_nodes(t_node **stack);
 int		is_stack_sorted(t_node *stack);
 
 /* stack_utils.c */
+int	stack_size(t_node *stack);
 int		find_smallest_nbr(t_node *stack);
 void	set_associate_nodes(t_node **stack_a, t_node **stack_b);
 void	find_cur_idx(t_node **stack);
 void	set_indices(t_node **stack_a, t_node **stack_b);
-void	calculate_price(t_node **stack);
+// void	calculate_price(t_node **stack);
 void	set_prices(t_node **stack_a, t_node **stack_b);
 void	set_cheapest_node(t_node **stack_a, t_node **stack_b);
 void	init_nodes(t_node **stack_a, t_node **stack_b);

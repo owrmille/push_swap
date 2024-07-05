@@ -16,74 +16,25 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		// --swap-- :
-		// ft_printf("HEAD: %d\n", stack_a->nbr);
-		// print_stack(stack_a);
-		// sa(&stack_a);
-		// ft_printf("After swap:\n");
-		// ft_printf("HEAD: %d\n", stack_a->nbr);
-		// print_stack(stack_a);
-
-		// --rotate-- :
-		// ft_printf("HEAD: %d\n", stack_a->nbr);
-		// print_stack(stack_a);
-		// ra(&stack_a);
-		// ft_printf("After rotate:\n");
-		// ft_printf("HEAD: %d\n", stack_a->nbr);
-		// print_stack(stack_a);
-
-		// --reverse_rotate-- :
-		// ft_printf("HEAD: %d\n", stack_a->nbr);
-		// print_stack(stack_a);
-		// rra(&stack_a);
-		// ft_printf("After reverse rotate:\n");
-		// ft_printf("HEAD: %d\n", stack_a->nbr);
-		// print_stack(stack_a);
-
-		// --push-- :
-		// ft_printf("HEAD: %d\n", stack_a->nbr);
-		// print_stack(stack_a);
-		// print_stack(stack_b);
-
-		// pb(&stack_a, &stack_b);
-		// print_stack(stack_a);
-		// print_stack(stack_b);
-
-		// pb(&stack_a, &stack_b);
-		// print_stack(stack_a);
-		// print_stack(stack_b);
-
-		// pb(&stack_a, &stack_b);
-		// print_stack(stack_a);
-		// print_stack(stack_b);
-
-		// pb(&stack_a, &stack_b);
-		// print_stack(stack_a);
-		// print_stack(stack_b);
-
-		// --sort 3 nodes--:
-		// print_stack(stack_a);
-		// sort_three_nodes(&stack_a);
-		// print_stack(stack_a);
-
-		// --sort (in general)--
-		ft_printf("size: %d\n", size);
-		ft_printf("A before:\n");
-		print_stack(stack_a);
-		ft_printf("B before:\n");
-		print_stack(stack_b);
-		ft_printf("\n");
-
-		sort(size, &stack_a, &stack_b);
-		// print_associates(stack_b);
+	// 	ft_printf("size: %d\n", size);
+	// 	ft_printf("A before:\n");
+	// 	print_stack(stack_a);
+	// 	ft_printf("B before:\n");
+	// 	print_stack(stack_b);
+	// 	ft_printf("\n");
 		// print_info(stack_a);
 		// print_info(stack_b);
 
-		// ft_printf("\nA after:\n");
-		// print_stack(stack_a);
-		// ft_printf("B after:\n");
-		// print_stack(stack_b);
+		sort(size, &stack_a, &stack_b);
 
+
+		// ft_printf("A (end)):\n");
+		// print_stack(stack_a);
+		// ft_printf("B (end):\n");
+		// print_stack(stack_b);
+		// ft_printf("\n");
+
+		
 
 		free_stack(stack_a);
 		free_stack(stack_b);
