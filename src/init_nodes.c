@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_nodes.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/08 01:20:55 by iatopchu          #+#    #+#             */
+/*   Updated: 2024/07/08 01:20:56 by iatopchu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	set_indices(t_node **stack_a, t_node **stack_b)
@@ -67,6 +79,7 @@ void	set_cheapest_node(t_node **stack_a, t_node **stack_b)
 	int		cheapest;
 
 	(void)stack_a;
+	cheapest_node = NULL;
 	cur_b = *stack_b;
 	cheapest = INT_MAX;
 	while (cur_b)
@@ -79,7 +92,8 @@ void	set_cheapest_node(t_node **stack_a, t_node **stack_b)
 		}
 		cur_b = cur_b->next;
 	}
-	cheapest_node->cheapest_price = 1;
+	if (cheapest_node)
+		cheapest_node->cheapest_price = 1;
 }
 
 void	init_nodes(t_node **stack_a, t_node **stack_b)

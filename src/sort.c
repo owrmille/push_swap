@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/08 01:21:48 by iatopchu          #+#    #+#             */
+/*   Updated: 2024/07/08 01:21:49 by iatopchu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	rotate_stacks(t_node **stack_a, t_node **stack_b, t_node *cheapest)
@@ -44,44 +56,39 @@ void	rearrange_nodes(t_node **stack_a, t_node **stack_b)
 	pa(stack_a, stack_b);
 }
 
+void	sort_five_nodes(t_node **a, t_node **b)
+{
+	while (stack_size(*a) > 3)
+	{
+		init_nodes(a, b);
+		rotate_cheapest_to_top_a(a, find_smallest_node(*a));
+		pb(a, b);
+	}
+}
+
 void	sort(int size, t_node **stack_a, t_node **stack_b)
 {
-	if (is_stack_sorted(*stack_a))
-		return ;
-	if (size == 3)
+	if (size == 2)
+		sa(stack_a);
+	else if (size == 3)
 		sort_three_nodes(stack_a);
 	else
 	{
-		while (size > 3)
+		if (size == 5)
+			sort_five_nodes(stack_a, stack_b);
+		else
 		{
-			pb(stack_a, stack_b);
-			size--;
+			while (size > 3)
+			{
+				pb(stack_a, stack_b);
+				size--;
+			}
 		}
 		sort_three_nodes(stack_a);
 		while (*stack_b)
 		{
-			// ft_printf("\n-----------CYCLE INFO (before)----------");
-			// ft_printf("\nA:\n");
-			// print_stack(*stack_a);
-			// ft_printf("\nB:\n");
-			// print_stack(*stack_b);
-			// ft_printf("\n");
-			// ft_printf("\nA:\n");
-			// print_info(*stack_a);
-			// ft_printf("\nB:\n");
-			// print_info(*stack_b);
 			init_nodes(stack_a, stack_b);
 			rearrange_nodes(stack_a, stack_b);
-			// ft_printf("\n-----------CYCLE INFO (after)----------");
-			// ft_printf("\nA:\n");
-			// print_stack(*stack_a);
-			// ft_printf("\nB:\n");
-			// print_stack(*stack_b);
-			// ft_printf("\n");
-			// ft_printf("\nA:\n");
-			// print_info(*stack_a);
-			// ft_printf("\nB:\n");
-			// print_info(*stack_b);
 		}
 		set_indices(stack_a, stack_b);
 		rotate_smallest_to_top(stack_a);

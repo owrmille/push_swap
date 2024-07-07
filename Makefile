@@ -5,23 +5,23 @@ LIBFT_DIR   = ./libft/libft
 CC          = cc
 CFLAGS      = -g -Wextra -Werror -Wall
 
-SRCS        = temp.c \
-			ft_atol_for_nums.c \
-            check_utils.c \
-			check_utils_2.c \
-			check_utils_3.c \
-			node_utils.c \
-			memory_utils.c \
-			swap.c \
-			rotate.c \
-			reverse_rotate.c \
-			push.c \
-			sort_three_nodes.c \
-			init_nodes.c \
-			stack_utils.c \
-			rotate_to_top.c \
-			sort.c \
-			push_swap.c 
+SRCS        = ./src/temp.c \
+			./src/ft_atol_for_nums.c \
+            ./src/check_utils.c \
+			./src/check_utils_2.c \
+			./src/check_utils_3.c \
+			./src/node_utils.c \
+			./src/memory_utils.c \
+			./src/swap.c \
+			./src/rotate.c \
+			./src/reverse_rotate.c \
+			./src/push.c \
+			./src/sort_three_nodes.c \
+			./src/init_nodes.c \
+			./src/stack_utils.c \
+			./src/rotate_to_top.c \
+			./src/sort.c \
+			./src/push_swap.c 
 
 OBJS        = $(SRCS:.c=.o)
 

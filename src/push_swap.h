@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/08 01:21:16 by iatopchu          #+#    #+#             */
+/*   Updated: 2024/07/08 01:26:36 by iatopchu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
 # include <limits.h>
-# include "./libft/libft/libft.h"
+# include "../libft/libft/libft.h"
 
 typedef struct s_node
 {
@@ -77,6 +89,7 @@ void	pb(t_node **stack_a, t_node **stack_b);
 /* sort_three_nodes.c */
 t_node	*find_max_node(t_node *stack);
 void	sort_three_nodes(t_node **stack);
+void	sort_five_nodes(t_node **a, t_node **b);
 
 /* init_nodes.c */
 void	set_indices(t_node **stack_a, t_node **stack_b);

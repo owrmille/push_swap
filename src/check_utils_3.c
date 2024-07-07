@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_utils_3.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/08 01:20:37 by iatopchu          #+#    #+#             */
+/*   Updated: 2024/07/08 01:20:38 by iatopchu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 char	**parse_input(char *input)
@@ -6,7 +18,6 @@ char	**parse_input(char *input)
 
 	if (input == NULL || *input == '\0')
 	{
-		print_error();
 		return (NULL);
 	}
 	if (!(find_symbol(input, ' ')))
@@ -14,7 +25,7 @@ char	**parse_input(char *input)
 		strings = malloc(sizeof(char *) * 2);
 		if (strings == NULL)
 			return (NULL);
-		strings[0] = input;
+		strings[0] = ft_strdup(input);
 		strings[1] = NULL;
 	}
 	else
@@ -36,7 +47,6 @@ int	convert_and_append(char **strings, t_node **stack_a)
 		if (number > INT_MAX || number < INT_MIN
 			|| !(check_doubles(*stack_a, (int)number)))
 		{
-			free_split(strings);
 			print_error();
 			return (0);
 		}
