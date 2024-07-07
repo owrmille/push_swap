@@ -32,3 +32,18 @@ void	free_array(char	**array)
 	}
 	free(array);
 }
+
+void	free_split(char **strings)
+{
+	int	i;
+
+	i = 0;
+	if (!strings)
+		return ;
+	while (strings[i])
+	{
+		free(strings[i]);
+		i++;
+	}
+	free(strings);
+}

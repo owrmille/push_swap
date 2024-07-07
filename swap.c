@@ -7,10 +7,8 @@ void	swap(t_node **stack)
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return ;
-
 	first_node = *stack;
 	second_node = (*stack)->next;
-
 	first_node->next = second_node->next;
 	first_node->prev = second_node;
 	second_node->next = first_node;

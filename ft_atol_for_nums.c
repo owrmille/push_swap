@@ -8,15 +8,11 @@ long	ft_atol_for_nums(const char	*str)
 	sign_val = 1;
 	number = 0;
 	while ((*str >= 9 && *str <= 13) || *str == 32)
-	{
 		str++;
-	}
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-		{
 			sign_val = -1;
-		}
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')

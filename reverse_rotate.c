@@ -11,7 +11,6 @@ void	reverse_rotate(t_node **stack)
 	first_node = *stack;
 	last_node = find_last_node(*stack);
 	second_last_node = last_node->prev;
-
 	*stack = last_node;
 	(*stack)->prev = NULL;
 	(*stack)->next = first_node;

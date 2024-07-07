@@ -11,7 +11,6 @@ void	push(t_node **stack_from, t_node **stack_to)
 	first_node_from = *stack_from;
 	second_node_from = first_node_from->next;
 	first_node_to = *stack_to;
-
 	*stack_from = second_node_from;
 	if (second_node_from != NULL)
 		second_node_from->prev = NULL;

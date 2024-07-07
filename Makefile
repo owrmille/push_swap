@@ -5,9 +5,11 @@ LIBFT_DIR   = ./libft/libft
 CC          = cc
 CFLAGS      = -g -Wextra -Werror -Wall
 
-SRCS        = push_swap.c \
+SRCS        = temp.c \
+			ft_atol_for_nums.c \
             check_utils.c \
-            ft_atol_for_nums.c \
+			check_utils_2.c \
+			check_utils_3.c \
 			node_utils.c \
 			memory_utils.c \
 			swap.c \
@@ -15,10 +17,11 @@ SRCS        = push_swap.c \
 			reverse_rotate.c \
 			push.c \
 			sort_three_nodes.c \
-			sort_utils.c \
+			init_nodes.c \
 			stack_utils.c \
+			rotate_to_top.c \
 			sort.c \
-			temp.c
+			push_swap.c 
 
 OBJS        = $(SRCS:.c=.o)
 
